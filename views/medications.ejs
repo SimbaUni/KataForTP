@@ -1,0 +1,32 @@
+<%- include('partials/header')-%>
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <h1 class="cover-heading" style="color: rgb(0, 0, 0);">Medications In Stock</h1>
+    <div class="container bg-light text-dark">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Medication</th>
+            <th>Strength</th>
+            <th>Pack Size</th>
+            <th>Total Packs</th> 
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%medications.forEach(function(entry) {%>
+            <tr>
+              <td><%=entry.name%></td>
+              <td><%=entry.strength%>mg</td>
+              <td><%=entry.packSize%></td>
+              <td><%=entry.totalPacks%></td>
+              <td><a href="/medications/<%= entry._id %>/edit">Edit</a></td>
+            </tr>
+            <%});%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</body>
+<%- include('partials/footer')-%>
+</html>

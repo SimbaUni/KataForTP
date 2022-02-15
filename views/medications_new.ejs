@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<div class="row">
+  <div class="col-6 m-auto" style="background-color: rgb(255, 255, 255); padding: 2.5rem;">
+    <h1 style="text-align: center;">Add New Medication</h1>
+
+    <form action="/medications" method="POST">
+      <div class="form-group">
+        <label for="name">Medication Name</label>
+        <input
+          type="text"
+          name="name"
+          autofocus
+          class="form-control"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="strength">Strength (mg)</label>
+        <input type="number" name="strength" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="packSize">Pack Size</label>
+        <input type="number" name="packSize" class="form-control" required />
+      </div>  
+
+      <div class="form-group">
+        <label for="totalPacks">Total Packs</label>
+        <input type="number" name="totalPacks" class="form-control" required />
+      </div> 
+     
+      <button type="submit" class="btn btn-primary float-right">Submit</button>
+    </div>
+    </form>
+  </div>
+
+<%- include('partials/footer') %>
+
