@@ -10,6 +10,14 @@ Using MongoDB, Express, Node.js and Embedded JavaScript
 # install dependencies
 $ npm install
 
+# replace example mongoDB connection in config.js
+const config = {
+    db: {
+        username: "Your username goes here",
+        connection: "Your mongoDB connection link goes here"
+    }
+}
+
 # run using localhost:3000
 $ node app.js
 ```
