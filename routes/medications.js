@@ -24,9 +24,11 @@ router.post("/", checkMedicationName, async (req, res) => {
   };
 
   Medication.create(newMedication);
+  console.table(newMedication);
  
-  req.flash("success", "You have successfully added the medication");
+
   try {
+    req.flash("success", "You have successfully added the medication");
     res.redirect("/medications");
   } catch (error) {
     console.log(error);
