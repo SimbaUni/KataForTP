@@ -40,6 +40,10 @@ $ node app.js
 
 ![Alt text](https://github.com/SimbaUni/KataForTP/blob/ConsoleTable.PNG/ConsoleTable.PNG?raw=true)
 
+## Issues
+
+Connect-flash is currently not working and due to time constraints this will not be updated.
+
 ## Roadmap
 
 Potential updates to front-end display.
